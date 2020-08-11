@@ -1,0 +1,5 @@
+<h1><%= @task.title %></h1>
+<p><%= link_to  "📝 Edit this task", edit_task_path(@task)%></p>
+<p><%= @task.details %></p>
+<p style="margin: 8px;"><%= @task.completed ? '✅ This task is completed' : '❌ This task is not completed' %></p>
+<%= link_to "Come back to see all tasks", tasks_path %>

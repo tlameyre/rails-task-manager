@@ -1,0 +1,12 @@
+<h1>My Tasks</h1>
+
+<% @tasks.each do |task| %>
+  <div style="display: flex; align-items: center;">
+    <p style="margin: 8px;"><%= task.completed ? '✅' : '❌' %></p>
+    <h2 style="margin-right: 8px;"><%= link_to "#{task.title}", task_path(task) %></h2>
+    <p><%= link_to "🗑 Delete this task", task_path(task), method: :delete %></p>
+  </div>
+<% end %>
+
+<p><%= link_to "Add a new task", new_task_path %></p>
+
